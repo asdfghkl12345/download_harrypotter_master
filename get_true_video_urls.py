@@ -25,7 +25,8 @@ def get_video_url(url):
         'referer' : new_url
     }
     video_response = requests.get(video_url,headers=headers)
-    the_last_video_url = re.findall("var urls = '(.*?)';",video_response.text)[0]
+    # print(video_response.text)
+    the_last_video_url = re.findall("var vid = '(.*?)';",video_response.text)[0]
     return the_last_video_url
     # print(video_response.text)
 def get_urls(video_url):

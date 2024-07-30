@@ -1,6 +1,9 @@
 import download
 import os
 import get_true_video_urls
+
+path = "download"
+os.makedirs(path)
 name,video_url = get_true_video_urls.get_urls("https://www.libvio.fun/detail/4632.html")
 # print(name,video_url)
 for i in range(len(video_url)):
